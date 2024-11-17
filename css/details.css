@@ -1,0 +1,85 @@
+body {
+    background-color: #a36ce6;
+}
+
+/* Estilo general para las secciones */
+.detalles-seccion,
+.contador-seccion {
+    padding: 20px;
+    text-align: center;
+    color: #4B3A67;
+    background-color: #d8bde5;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contador-seccion .link-details {
+    text-decoration: none;
+    color: #4c366d;
+    padding: 10px;
+    text-align: left;
+   
+}
+
+.contador-seccion .link-details:hover {
+    text-decoration: none;
+    color: #2e1459;
+    padding: 10px;
+    text-align: left;
+   
+}
+
+/* Título de las secciones */
+.detalles-seccion h2,
+.contador-seccion h2 {
+    color: #7D5BA6;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.detalles-seccion img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Estilo del contador */
+.contador {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.contador-item {
+    background-color: #c29cd6;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contador-item span {
+    display: block;
+    font-size: 1.5em;
+    color: #4B3A67;
+    font-weight: bold;
+}
+
+.contador-item p {
+    font-size: 0.9em;
+    color: #7D5BA6;
+}
+
+/* Adaptabilidad para móviles */
+@media (max-width: 600px) {
+    .contador {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contador-item {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

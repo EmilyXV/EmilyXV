@@ -1,0 +1,378 @@
+body {
+    background-color: #DDB6DD;
+}
+
+.sidebar {
+    height: 70vh;
+    width: 190px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    /* Oculto por defecto en móviles */
+    background-color: #744FC6;
+    color: white;
+    padding-top: 20px;
+    z-index: 1000;
+    transition: 0.3s ease;
+    border-bottom-right-radius: 10px;
+}
+
+.sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    display: block;
+    text-align: center;
+
+}
+
+.sidebar a:hover {
+    background-color: #5a37a5;
+    transform: scale(1.2);
+    transition: 0.2s;
+    border-radius: 8px;
+}
+
+/* Botón de cierre (tacha) */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
+    transition: transform 0.4s ease;
+    ;
+
+}
+
+.close-btn:hover {
+    transform: rotate(180deg);
+    color: #E1A6E1;
+
+}
+
+/* Header */
+.header {
+    margin-left: 250px;
+    /* Espacio para el sidebar en pantallas grandes */
+    padding: 20px;
+    background-color: #7e1f98;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #afacb3;
+    text-align: center;
+    padding: 18px;
+    font-size: 35px;
+}
+
+/* Logo */
+.header .logo {
+    width: 70px;
+    margin-top: -10px;
+}
+
+/* Botón de menú (hamburguesa) */
+.menu-btn {
+    font-size: 30px;
+    color: #a4a0a8;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    /* Oculto en pantallas grandes */
+}
+
+.menu-btn:hover {
+    color: rgb(72, 64, 75);
+    transition: 0.5s ease;
+}
+
+/* Contenedor de video de fondo */
+.video-container {
+    position: relative;
+    height: 100vh;
+    /* Ocupar toda la altura de la pantalla */
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    /* Centrar contenido horizontalmente */
+    align-items: center;
+    /* Centrar contenido verticalmente */
+}
+
+/* Video de fondo ajustado */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ajusta el video para que cubra todo el contenedor sin distorsión */
+    opacity: 0.9;
+    /* Opacidad para el video */
+    z-index: 1;
+}
+
+/* Texto superpuesto centrado */
+.text-overlay {
+    position: absolute;
+    /* Absoluto para estar sobre el video */
+    top: 50%;
+    /* Centrado verticalmente */
+    left: 50%;
+    /* Centrado horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Ajuste de posición */
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    background: rgba(83, 83, 83, 0.6);
+    /* Fondo oscuro semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+    width: 80%;
+
+}
+
+.text-overlay p {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, cursive;
+    /* Fuente estilizada */
+    font-size: 0, 9rem;
+
+}
+
+.text-overlay b {
+    font-size: 1.2rem;
+    padding-top: 7pz;
+    font-family: 'Dancing Script';
+}
+
+/* Imagen de fondo fija */
+.fixed-bg-section {
+    background-image: url('/assets/img-b1.jpg');
+    /* Cambia a tu imagen */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+
+}
+
+/* Contenedor con opacidad */
+.content-overlay {
+    background-color: rgba(6, 3, 3, 0.5);
+    /* Fondo semi-transparente */
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 140px;
+    text-align: center;
+    border-radius: 10px;
+    width: 100vw;
+    height: 100vh;
+    max-width: 600px;
+}
+
+/* Estilo para el texto y el contador */
+.content-overlay .title-overlay {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 29px;
+    margin: 0 auto;
+    text-align: center;
+    
+    
+}
+
+.content-overlay .text-overlay{
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 90%;
+    text-align: center;
+  
+    margin-top: 100px;
+  }
+  
+.content-overlay .fuerte{
+    margin-top: 190px;
+    font-weight: bold;
+}
+
+
+/* Estilo para el span con neón */
+.content-overlay span {
+    animation: blink-fade 1.5s ease-in-out infinite;
+    color: #d89ff3;
+    /* Neón Violeta */
+    font-weight: bold;
+    text-shadow: 0 0 10px #a939d8, 0 0 20px #99158a, 0 0 30px #c17fff;
+}
+
+/* Animación de parpadeo y desvanecimiento */
+@keyframes blink-fade {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+
+
+.carousel-item {
+    object-fit: cover;
+    height: auto;
+    max-height: 645px;
+}
+
+
+.footer {
+    background-color: #7d2895;
+    /* Color morado */
+    padding: 40px 0;
+    /* Espaciado grueso */
+    color: #c7c6c7;
+}
+
+.footer h4 {
+    margin-bottom: 20px;
+    /* Espacio entre el título y el texto */
+    font-weight: bold;
+    /* Texto en negrita */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 30px;
+    opacity: 0;
+    /* Inicialmente invisible */
+    transform: scale(0);
+    /* Inicialmente pequeño */
+    transition: opacity 0.9s ease, transform 2s ease;
+    /* Transiciones suaves */
+
+    font-size: 1.2rem;
+    /* Tamaño de fuente más grande */
+}
+
+
+.dark-container {
+    font-size: 18px;
+    box-shadow: #a316b5;
+    font-family: monospace;
+    background-color: #854a97;
+    /* Color más oscuro */
+    padding: 20px;
+    /* Espaciado interno */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    margin: 20px 0;
+    text-align: justify;
+    
+    color: #E7E2E7;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+
+
+
+
+
+/* Media Queries para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    .content-overlay h2 {
+        font-size: 2rem;
+    }
+
+    .content-overlay p {
+        font-size: 1rem;
+    }
+
+    .countdown-timer {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Ajustes para móviles */
+@media (max-width: 600px) {
+    .text-overlay p {
+        font-size: 1.2rem;
+        /* Ajuste del tamaño del texto para móviles */
+    }
+
+    .text-overlay b {
+        font-size: 1rem;
+    }
+
+    .video-container {
+        height: 100vh;
+        /* Asegura que ocupe toda la altura en móviles */
+    }
+}
+
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .header {
+        margin-left: 0;
+        padding: 10px;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+    }
+
+    .logo {
+        display: block;
+        /* Mostrar logo en pantallas pequeñas */
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 40px;
+        /* Ajustar el tamaño del logo en móviles */
+    }
+
+    /* Mostrar el botón de menú en pantallas pequeñas */
+    .menu-btn {
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+
+    /* Cambiar el comportamiento del sidebar en móvil */
+    .sidebar {
+        left: -250px;
+        /* Oculto por defecto en móviles */
+    }
+
+    .sidebar.active {
+        left: 0;
+        /* Mostrar el sidebar cuando esté activo */
+    }
+}

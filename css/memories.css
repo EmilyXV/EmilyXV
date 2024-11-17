@@ -1,0 +1,45 @@
+body{
+    background-color: #7D5BA6;
+}
+#mural {
+    padding: 20px;
+    text-align: center;
+    background-color: #c29cd6; /* Fondo lila oscuro */
+    color: #832583;
+  }
+  
+  #mural h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  #mural .link-mural{
+    text-decoration: none;
+    color: #4c366d;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .gallery {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: 200px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.7s;
+    opacity: 0.4;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.09);
+    opacity: 1;
+    transition: 0.9s;
+  }
+  

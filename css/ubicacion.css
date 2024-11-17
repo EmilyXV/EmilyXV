@@ -1,0 +1,33 @@
+body{
+    background-color: #7D5BA6;
+}
+.ubicacion-section {
+    background-color: #c29cd6;/* Fondo color lila suave */
+    padding: 50px 20px;
+    color: #351961; /* Texto color morado oscuro */
+    text-align: center;
+    border-radius: 3px;
+}
+.container .link-ubicacion{
+    text-decoration: none;
+    color: #4c366d;
+    padding: 10px;
+    text-align: left;
+}
+.ubicacion-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #832583;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.ubicacion-descripcion {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
