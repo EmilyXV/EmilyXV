@@ -174,7 +174,7 @@ body {
 
 /* Contenedor con opacidad */
 .content-overlay {
-    background-color: rgba(6, 3, 3, 0.5);
+    
     /* Fondo semi-transparente */
     color: white;
     position: absolute;
