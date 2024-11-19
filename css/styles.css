@@ -162,9 +162,9 @@ body {
 
 /* Imagen de fondo fija */
 .fixed-bg-section {
-    background-image: url('/assets/img-1.jpg');
+    background-image: url('/assets/img-b1.jpg');
     /* Cambia a tu imagen */
-    background-attachment: fixed;
+    
     background-size: cover;
     background-position: center;
     height: 100vh;
