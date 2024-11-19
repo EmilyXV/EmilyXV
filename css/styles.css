@@ -1,5 +1,5 @@
 body {
-    background-color: #DDB6DD;
+    background-color:#a36ce6;
 }
 
 .sidebar {
@@ -164,7 +164,7 @@ body {
 .fixed-bg-section {
     background-image: url('/assets/img-b1.jpg');
     /* Cambia a tu imagen */
-    
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     height: 100vh;
